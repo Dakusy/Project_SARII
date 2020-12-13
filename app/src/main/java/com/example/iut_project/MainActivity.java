@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
            });
 
-           this.contact2 = (ImageButton) findViewById(R.id.Ajout1);
+           this.contact2 = (ImageButton) findViewById(R.id.Ajout2);
 
            contact2.setOnClickListener(new View.OnClickListener() {
                @Override
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                }
 
            });
-           this.contact3 = (ImageButton) findViewById(R.id.Ajout1);
+           this.contact3 = (ImageButton) findViewById(R.id.Ajout3);
 
            contact3.setOnClickListener(new View.OnClickListener() {
                @Override

@@ -18,17 +18,27 @@
             app:srcCompat="@drawable/logo" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Name"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextPhone2"
+            android:id="@+id/Surname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Surname"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/Phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Phone"
             android:inputType="phone" />
 
         <ImageButton
