@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Envoyer">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:text="Choisis ton type d'accident : " />
+
+        <EditText
+            android:id="@+id/Phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/Panne"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Panne" />
+
+        <Button
+            android:id="@+id/Pb_Medicale"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Problème Medicale" />
+
+        <Button
+            android:id="@+id/Besoin_Aide"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Besoin d'aide" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

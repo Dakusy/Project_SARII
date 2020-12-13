@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">IUT-Project</string>
+    <string name="welcome_mag">Bienvenue sur mon application</string>
 </resources>
