@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
 public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Contact.db";
     public static final String TABLE_NAME = "contact_table";
@@ -15,8 +13,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     public static final String COL_2 = "NAME";
     public static final String COL_3 = "SURNAME";
     public static final String COL_4 = "TEL";
-
-
+    public static final String ID = "" ;
 
 
     public MySQLiteOpenHelper(Context context) {
@@ -70,4 +67,12 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
         return true;
     }
 
-}
+    public Cursor getOneData(){
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = null;
+            cursor = db.rawQuery("select * from " + TABLE_NAME + " where " + COL_1 + "=2", null);
+        return cursor;
+
+        }
+    }
+
