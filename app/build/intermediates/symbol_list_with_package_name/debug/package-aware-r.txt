@@ -687,8 +687,6 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
 id Ajout1
-id Ajout2
-id Ajout3
 id Ajouter
 id Besoin_Aide
 id CTRL
@@ -763,7 +761,11 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button1
+id button2
+id button3
 id buttonPanel
+id cc
 id center
 id center_horizontal
 id center_vertical
@@ -818,6 +820,7 @@ id message
 id middle
 id multiply
 id never
+id next
 id none
 id normal
 id notification_background
@@ -833,7 +836,6 @@ id progress_circular
 id progress_horizontal
 id radio
 id retrieve
-id retrieve_text
 id right
 id right_icon
 id right_side

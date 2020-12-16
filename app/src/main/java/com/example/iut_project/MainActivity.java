@@ -20,7 +20,6 @@ import java.util.jar.Attributes;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private Button NextPage;
     private ImageButton contact1;
     private ImageButton contact2;
@@ -56,27 +55,5 @@ public class MainActivity extends AppCompatActivity {
 
            });
 
-           this.contact2 = (ImageButton) findViewById(R.id.Ajout2);
-
-           contact2.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   Intent intent_b = new Intent(getApplicationContext(), AjoutContact.class);
-                   startActivity(intent_b);
-                   finish();
-               }
-
-           });
-           this.contact3 = (ImageButton) findViewById(R.id.Ajout3);
-
-           contact3.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   Intent intent_c = new Intent(getApplicationContext(), AjoutContact.class);
-                   startActivity(intent_c);
-                   finish();
-               }
-
-           });
        }
 }

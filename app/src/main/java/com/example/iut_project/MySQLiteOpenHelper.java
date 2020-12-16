@@ -16,6 +16,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     public static final String ID = "" ;
 
 
+
     public MySQLiteOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
@@ -67,10 +68,10 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public Cursor getOneData(){
+    public Cursor getOneData(int id){
             SQLiteDatabase db = this.getReadableDatabase();
             Cursor cursor = null;
-            cursor = db.rawQuery("select * from " + TABLE_NAME + " where " + COL_1 + "=2", null);
+            cursor = db.rawQuery("select * from " + TABLE_NAME + " where " + COL_1 + "=" + id , null);
         return cursor;
 
         }
