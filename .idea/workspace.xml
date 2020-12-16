@@ -11,21 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5db0fad8-6d47-4db2-8e64-ebe9100e040f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iut_project/AjoutContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iut_project/AjoutContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iut_project/Envoyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iut_project/Envoyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iut_project/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iut_project/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/iut_project/MySQLiteOpenHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/iut_project/MySQLiteOpenHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ajout_contact.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ajout_contact.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_envoyer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_envoyer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/iut_project/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/iut_project/BuildConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_API_26]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[5306f0f8]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -71,6 +64,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_26" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-13T15:26:40.033Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowDebug.ShowToolbar" value="false" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
@@ -175,38 +169,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="259" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607880234487" />
-    <state width="1877" height="346" key="GridCell.Tab.0.bottom" timestamp="1608127468535">
+    <state width="1877" height="346" key="GridCell.Tab.0.bottom" timestamp="1608130230818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608127468535" />
-    <state width="1877" height="346" key="GridCell.Tab.0.center" timestamp="1608127468535">
+    <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608130230818" />
+    <state width="1877" height="346" key="GridCell.Tab.0.center" timestamp="1608130230818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608127468535" />
-    <state width="1877" height="346" key="GridCell.Tab.0.left" timestamp="1608127468535">
+    <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608130230818" />
+    <state width="1877" height="346" key="GridCell.Tab.0.left" timestamp="1608130230817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608127468535" />
-    <state width="1877" height="346" key="GridCell.Tab.0.right" timestamp="1608127468535">
+    <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608130230817" />
+    <state width="1877" height="346" key="GridCell.Tab.0.right" timestamp="1608130230818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608127468535" />
-    <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1608127468536">
+    <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608130230818" />
+    <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1608130230818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608127468536" />
-    <state width="1877" height="346" key="GridCell.Tab.1.center" timestamp="1608127468536">
+    <state width="1877" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608130230818" />
+    <state width="1877" height="346" key="GridCell.Tab.1.center" timestamp="1608130230818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608127468536" />
-    <state width="1877" height="346" key="GridCell.Tab.1.left" timestamp="1608127468535">
+    <state width="1877" height="346" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608130230818" />
+    <state width="1877" height="346" key="GridCell.Tab.1.left" timestamp="1608130230818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608127468535" />
-    <state width="1877" height="346" key="GridCell.Tab.1.right" timestamp="1608127468536">
+    <state width="1877" height="346" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608130230818" />
+    <state width="1877" height="346" key="GridCell.Tab.1.right" timestamp="1608130230818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608127468536" />
+    <state width="1877" height="346" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608130230818" />
     <state x="507" y="166" key="SettingsEditor" timestamp="1607878286053">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
