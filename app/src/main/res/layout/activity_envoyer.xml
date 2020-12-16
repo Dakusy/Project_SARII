@@ -21,15 +21,9 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:text="Choisis ton type d'accident : " />
-
-        <EditText
-            android:id="@+id/Phone"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="phone" />
+            android:text="Choisis ton type d'accident : "
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/Panne"
@@ -48,6 +42,12 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:text="Besoin d'aide" />
+
+        <Button
+            android:id="@+id/cc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cc" />
 
     </LinearLayout>
 
