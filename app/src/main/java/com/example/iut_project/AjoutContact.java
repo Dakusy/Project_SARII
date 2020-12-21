@@ -20,7 +20,7 @@ public class AjoutContact extends AppCompatActivity {
     MySQLiteOpenHelper myDB;
     EditText editName, editSurname, editTel;
     ImageButton Ajout;
-    Button viewAll ;
+    Button viewAll, back ;
 
 
     @Override
@@ -33,6 +33,7 @@ public class AjoutContact extends AppCompatActivity {
         editTel = (EditText) findViewById(R.id.Phone);
         this.Ajout = (ImageButton) findViewById(R.id.Ajouter);
         viewAll = (Button) findViewById(R.id.test);
+        back = (Button) findViewById(R.id.back);
 
         final String[] num_tel = {""};
 
@@ -63,6 +64,17 @@ public class AjoutContact extends AppCompatActivity {
                     }
                 }
         );
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_a = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent_a);
+                finish();
+            }
+
+        });
+
         viewAll.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
