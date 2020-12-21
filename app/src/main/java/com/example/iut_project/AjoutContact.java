@@ -43,16 +43,23 @@ public class AjoutContact extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(editTel.getText().length() == 10 || editName.getText().length() == 0 || editSurname.getText().length() == 0) {
-                            boolean isInserted = myDB.insertData(editName.getText().toString(),
-                                    editSurname.getText().toString(),
-                                    editTel.getText().toString());
-                            if (isInserted == true)
-                                Toast.makeText(AjoutContact.this, "Data Inserted", Toast.LENGTH_LONG).show();
-                            else
-                                Toast.makeText(AjoutContact.this, "Data not Inserted", Toast.LENGTH_LONG).show();
+                        if (editTel.getText().length() == 10 && editName.getText().length() != 0 && editSurname.getText().length() != 0) {
+                            Cursor res = myDB.getAllData();
+                            if (res.getCount() > 3) {
+                                showMessage("Error", "3 Contacts déjà présent.");
+                            } else {
+                                boolean isInserted = myDB.insertData(editName.getText().toString(),
+                                        editSurname.getText().toString(),
+                                        editTel.getText().toString());
+                                if (isInserted == true)
+                                    Toast.makeText(AjoutContact.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                                else
+                                    Toast.makeText(AjoutContact.this, "Data not Inserted", Toast.LENGTH_LONG).show();
+                            }
                         }
-                        else{ showMessage("Error", "Champs non remplit ou mal remplit."); }
+                        else{
+                                showMessage("Error", "Champs non remplit ou mal remplit.");
+                            }
                     }
                 }
         );

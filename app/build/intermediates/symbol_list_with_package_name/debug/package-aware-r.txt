@@ -761,9 +761,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button1
-id button2
-id button3
 id buttonPanel
 id cc
 id center
@@ -825,7 +822,6 @@ id message
 id middle
 id multiply
 id never
-id next
 id next_choice
 id none
 id normal
