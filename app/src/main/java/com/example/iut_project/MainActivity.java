@@ -15,28 +15,25 @@ import java.util.jar.Attributes;
 
 
 /*
- * Création des conatacts
+ * Création des contacts
  */
 
 public class MainActivity extends AppCompatActivity {
 
     private Button NextPage;
     private ImageButton contact1;
-    private ImageButton contact2;
-    private ImageButton contact3;
 
        @Override
     protected void onCreate(Bundle savedInstanceState) {
            super.onCreate(savedInstanceState);
            setContentView(R.layout.activity_main);
-
            this.NextPage = findViewById(R.id.Next);
 
 
            NextPage.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   Intent send = new Intent(getApplicationContext(), Envoyer.class);
+                   Intent send = new Intent(getApplicationContext(), ChooseContact.class);
                    startActivity(send);
                    finish();
                }
@@ -48,12 +45,11 @@ public class MainActivity extends AppCompatActivity {
            contact1.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   Intent intent_a = new Intent(getApplicationContext(), ChooseContact.class);
+                   Intent intent_a = new Intent(getApplicationContext(), AjoutContact.class);
                    startActivity(intent_a);
                    finish();
                }
 
            });
-
        }
 }
