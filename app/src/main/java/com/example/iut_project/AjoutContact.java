@@ -19,9 +19,8 @@ import android.widget.Toast;
 public class AjoutContact extends AppCompatActivity {
     MySQLiteOpenHelper myDB;
     EditText editName, editSurname, editTel;
-    String retrieve_text;
     ImageButton Ajout;
-    Button test, retrieve ,contact_1,contact_2,contact_3, next;
+    Button test ,contact_1,contact_2,contact_3, next;
 
 
     @Override
@@ -34,7 +33,6 @@ public class AjoutContact extends AppCompatActivity {
         editTel = (EditText) findViewById(R.id.Phone);
         this.Ajout = (ImageButton) findViewById(R.id.Ajouter);
         test = (Button) findViewById(R.id.test);
-        retrieve = (Button) findViewById(R.id.retrieve);
         contact_1 = (Button) findViewById(R.id.button1);
         contact_2 = (Button) findViewById(R.id.button2);
         contact_3 = (Button) findViewById(R.id.button3);
@@ -114,63 +112,56 @@ public class AjoutContact extends AppCompatActivity {
                 }
         );
 
-        retrieve.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Cursor res = myDB.getOneData(ID[0]);
-                        if(ID[0] == 0){
-                            Toast.makeText(AjoutContact.this, "No Contact Selected", Toast.LENGTH_LONG).show();
-                        }
-
-                        if(ID[0] == 1){
-                            if(res.getCount() == 0) {
-                                // show message
-                                showMessage("Error","Nothing found");
-                                return;
-                            }
-
-                            if(res.getCount() != 0){
-                                res.moveToFirst();
-                                num_tel[0] = res.getString(3);
-                                Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
-                            }
-                        }
-
-                        if(ID[0] == 2){
-                            if(res.getCount() == 0 || res.getCount() > 1) {
-                                // show message
-                                showMessage("Error","Nothing found");
-                                return;
-                            }
-
-                            if(res.getCount() != 0){
-                                res.moveToFirst();
-                                num_tel[0] = res.getString(3);
-                                Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
-                            }
-                        }
-
-                        if(ID[0] == 3){
-                            if(res.getCount() == 0) {
-                                // show message
-                                showMessage("Error","Nothing found");
-                                return;
-                            }
-
-                            if(res.getCount() != 0){
-                                res.moveToFirst();
-                                num_tel[0] = res.getString(3);
-                                Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    }
-                }
-        );
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Cursor res = myDB.getOneData(ID[0]);
+                if(ID[0] == 0){
+                    Toast.makeText(AjoutContact.this, "No Contact Selected", Toast.LENGTH_LONG).show();
+                }
+
+                if(ID[0] == 1){
+                    if(res.getCount() == 0) {
+                        // show message
+                        showMessage("Error","Nothing found");
+                        return;
+                    }
+
+                    if(res.getCount() != 0){
+                        res.moveToFirst();
+                        num_tel[0] = res.getString(3);
+                        Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
+                    }
+                }
+
+                if(ID[0] == 2){
+                    if(res.getCount() == 0 || res.getCount() > 1) {
+                        // show message
+                        showMessage("Error","Nothing found");
+                        return;
+                    }
+
+                    if(res.getCount() != 0){
+                        res.moveToFirst();
+                        num_tel[0] = res.getString(3);
+                        Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
+                    }
+                }
+
+                if(ID[0] == 3){
+                    if(res.getCount() == 0) {
+                        // show message
+                        showMessage("Error","Nothing found");
+                        return;
+                    }
+
+                    if(res.getCount() != 0){
+                        res.moveToFirst();
+                        num_tel[0] = res.getString(3);
+                        Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
+                    }
+                }
                 Intent send = new Intent(getApplicationContext(), Envoyer.class);
                 send.putExtra("Number", num_tel[0]);
                 startActivity(send);
@@ -178,11 +169,6 @@ public class AjoutContact extends AppCompatActivity {
             }
 
         });
-
-
-
-
-
     }
     public void showMessage(String title,String Message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

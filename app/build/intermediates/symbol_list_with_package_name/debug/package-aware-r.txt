@@ -772,6 +772,10 @@ id center_vertical
 id chains
 id checkbox
 id checked
+id choice
+id choice1
+id choice2
+id choice3
 id chronometer
 id clip_horizontal
 id clip_vertical
@@ -816,11 +820,13 @@ id line3
 id linearLayout
 id listMode
 id list_item
+id logo
 id message
 id middle
 id multiply
 id never
 id next
+id next_choice
 id none
 id normal
 id notification_background
@@ -835,7 +841,6 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
-id retrieve
 id right
 id right_icon
 id right_side
@@ -938,6 +943,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_ajout_contact
+layout activity_choose_contact
 layout activity_envoyer
 layout activity_main
 layout custom_dialog

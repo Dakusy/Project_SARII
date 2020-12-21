@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
            contact1.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   Intent intent_a = new Intent(getApplicationContext(), AjoutContact.class);
+                   Intent intent_a = new Intent(getApplicationContext(), ChooseContact.class);
                    startActivity(intent_a);
                    finish();
                }

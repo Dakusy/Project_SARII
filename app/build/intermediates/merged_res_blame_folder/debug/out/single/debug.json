@@ -24,24 +24,24 @@
         "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_choose_contact.xml.flat",
+        "source": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\src\\main\\res\\layout\\activity_choose_contact.xml"
     },
     {
         "merged": "C:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
