@@ -46,7 +46,7 @@ public class AjoutContact extends AppCompatActivity {
                     public void onClick(View v) {
                         if (editTel.getText().length() == 10 && editName.getText().length() != 0 && editSurname.getText().length() != 0) {
                             Cursor res = myDB.getAllData();
-                            if (res.getCount() > 3) {
+                            if (res.getCount() >= 3) {
                                 showMessage("Error", "3 Contacts déjà présent.");
                             } else {
                                 boolean isInserted = myDB.insertData(editName.getText().toString(),
