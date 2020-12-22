@@ -66,18 +66,19 @@ public class ChooseContact extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Cursor res = myDB.getOneData(ID[0]);
+                Cursor allData = myDB.getAllData();
                 if (ID[0] == 0) {
                     Toast.makeText(ChooseContact.this, "No Contact Selected", Toast.LENGTH_LONG).show();
                 }
 
                 if (ID[0] == 1) {
-                    if (res.getCount() == 0) {
+                    if (allData.getCount() == 0) {
                         // show message
                         showMessage("Error", "Nothing found");
                         return;
                     }
 
-                    if (res.getCount() != 0) {
+                    if (allData.getCount() != 0) {
                         res.moveToFirst();
                         num_tel[0] = res.getString(3);
                         Toast.makeText(ChooseContact.this, "Nom :" + res.getString(1), Toast.LENGTH_LONG).show();
@@ -85,13 +86,13 @@ public class ChooseContact extends AppCompatActivity {
                 }
 
                 if (ID[0] == 2) {
-                    if (res.getCount() == 0 || res.getCount() < 2) {
+                    if (allData.getCount() == 0 || allData.getCount() < 2) {
                         // show message
                         showMessage("Error", "Nothing found");
                         return;
                     }
 
-                    if (res.getCount() != 0) {
+                    if (allData.getCount() != 0) {
                         res.moveToFirst();
                         num_tel[0] = res.getString(3);
                         Toast.makeText(ChooseContact.this, "Nom :" + res.getString(1), Toast.LENGTH_LONG).show();
@@ -99,13 +100,13 @@ public class ChooseContact extends AppCompatActivity {
                 }
 
                 if (ID[0] == 3) {
-                    if (res.getCount() == 0 || res.getCount() < 3) {
+                    if (allData.getCount() == 0 || allData.getCount() < 3) {
                         // show message
                         showMessage("Error", "Nothing found");
                         return;
                     }
 
-                    if (res.getCount() != 0) {
+                    if (allData.getCount() != 0) {
                         res.moveToFirst();
                         num_tel[0] = res.getString(3);
                         Toast.makeText(ChooseContact.this, "Nom :" + res.getString(1), Toast.LENGTH_LONG).show();

@@ -1,4 +1,4 @@
-#Mon Dec 21 17:34:44 CET 2020
+#Tue Dec 22 13:43:34 CET 2020
 base.0=C\:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
