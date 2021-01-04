@@ -8,12 +8,21 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.List;
 
 public class ChooseContact extends AppCompatActivity {
 
     MySQLiteOpenHelper myDB;
-    Button choice1, choice2, choice3, next_choice;
+    Button choice1, choice2, choice3,button;
+    TextView contact1;
+    TextView contact2;
+    TextView contact3;
+
+    ImageButton next_choice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +34,27 @@ public class ChooseContact extends AppCompatActivity {
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
         choice3 = (Button) findViewById(R.id.choice3);
-        next_choice = (Button) findViewById(R.id.next_choice);
-
+        next_choice = (ImageButton) findViewById(R.id.next);
+        contact1 = (TextView) findViewById(R.id.Contact1);
+        contact2 = (TextView) findViewById(R.id.Contact2);
+        contact3 = (TextView) findViewById(R.id.Contact3);
         final String[] num_tel = {""};
-
         final int[] ID = {0};
+
+
+        ///Afficher les contacts
+        List<AllContact> contacts = myDB.readContact();
+        for(AllContact contact : contacts){
+            if(contact.readID() == 1){
+                contact1.append(contact.Contact());
+            }
+            if(contact.readID() == 2){
+                contact2.append(contact.Contact());
+            }
+            if(contact.readID() == 3){
+                contact3.append(contact.Contact());
+            }
+        }
 
         choice1.setOnClickListener(
                 new View.OnClickListener(){
@@ -118,6 +143,8 @@ public class ChooseContact extends AppCompatActivity {
                 finish();
             }
         });
+
+
     }
 
 

@@ -20,7 +20,8 @@ public class AjoutContact extends AppCompatActivity {
     MySQLiteOpenHelper myDB;
     EditText editName, editSurname, editTel;
     ImageButton Ajout;
-    Button viewAll, back ;
+    Button viewAll;
+    ImageButton back;
 
 
     @Override
@@ -33,7 +34,7 @@ public class AjoutContact extends AppCompatActivity {
         editTel = (EditText) findViewById(R.id.Phone);
         this.Ajout = (ImageButton) findViewById(R.id.Ajouter);
         viewAll = (Button) findViewById(R.id.test);
-        back = (Button) findViewById(R.id.back);
+        back = (ImageButton) findViewById(R.id.back);
 
         final String[] num_tel = {""};
 
@@ -52,15 +53,22 @@ public class AjoutContact extends AppCompatActivity {
                                 boolean isInserted = myDB.insertData(editName.getText().toString(),
                                         editSurname.getText().toString(),
                                         editTel.getText().toString());
-                                if (isInserted == true)
+                                if (isInserted == true) {
                                     Toast.makeText(AjoutContact.this, "Data Inserted", Toast.LENGTH_LONG).show();
-                                else
+                                    Intent intent_a = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent_a);
+                                    finish();
+                                }else {
                                     Toast.makeText(AjoutContact.this, "Data not Inserted", Toast.LENGTH_LONG).show();
+                                }
                             }
+
+
                         }
                         else{
                                 showMessage("Error", "Champs non remplit ou mal remplit.");
                             }
+
                     }
                 }
         );

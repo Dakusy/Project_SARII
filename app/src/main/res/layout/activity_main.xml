@@ -19,11 +19,23 @@
             android:layout_height="235dp"
             app:srcCompat="@drawable/logo" />
 
-        <ImageButton
-            android:id="@+id/Ajout1"
+        <Button
+            android:id="@+id/Ajouter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_input_add" />
+            android:text=" Ajouter un contact" />
+
+        <Button
+            android:id="@+id/Supprimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Supprimer un contact" />
+
+        <Button
+            android:id="@+id/View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voir contact" />
 
         <Button
             android:id="@+id/Next"

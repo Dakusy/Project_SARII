@@ -20,15 +20,16 @@ import java.util.jar.Attributes;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button NextPage;
-    private ImageButton contact1;
+    private Button NextPage, Ajouter,View,Supp;
 
        @Override
     protected void onCreate(Bundle savedInstanceState) {
            super.onCreate(savedInstanceState);
            setContentView(R.layout.activity_main);
            this.NextPage = findViewById(R.id.Next);
-
+           this.Ajouter = findViewById(R.id.Ajouter);
+           this.View = findViewById(R.id.View);
+           this.Supp = findViewById(R.id.Supprimer);
 
            NextPage.setOnClickListener(new View.OnClickListener() {
                @Override
@@ -40,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
            });
 
-           this.contact1 = (ImageButton) findViewById(R.id.Ajout1);
 
-           contact1.setOnClickListener(new View.OnClickListener() {
+
+           Ajouter.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
                    Intent intent_a = new Intent(getApplicationContext(), AjoutContact.class);
@@ -51,5 +52,27 @@ public class MainActivity extends AppCompatActivity {
                }
 
            });
+
+           View.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   Intent intent_a = new Intent(getApplicationContext(), ViewContact.class);
+                   startActivity(intent_a);
+                   finish();
+               }
+
+           });
+
+           Supp.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   Intent intent_a = new Intent(getApplicationContext(), DeleteContact.class);
+                   startActivity(intent_a);
+                   finish();
+               }
+
+           });
+
+
        }
 }

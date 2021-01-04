@@ -1,4 +1,4 @@
-#Tue Dec 22 13:53:58 CET 2020
-base.0=C\:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Jan 04 16:10:40 CET 2021
+base.0=C\:\\Users\\thoma\\OneDrive\\Documents\\ProjetIUT\\IUT-Project\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
