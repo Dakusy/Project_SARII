@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Mon Jan 04 16:10:40 CET 2021
 base.0=C\:\\Users\\thoma\\OneDrive\\Documents\\ProjetIUT\\IUT-Project\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+=======
+#Tue Jan 12 17:34:42 CET 2021
+base.0=C\:\\Users\\jessy\\Desktop\\IUT-Project\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+>>>>>>> dev
 path.0=classes.dex
 renamed.0=classes.dex
