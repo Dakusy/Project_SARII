@@ -8,17 +8,17 @@ com/example/iut_project/Envoyer.java
  com.example.iut_project.Envoyer$4
 com/example/iut_project/BuildConfig.java
  com.example.iut_project.BuildConfig
-com/example/iut_project/AjoutContact.java
- com.example.iut_project.AjoutContact
- com.example.iut_project.AjoutContact$1
- com.example.iut_project.AjoutContact$2
- com.example.iut_project.AjoutContact$3
 com/example/iut_project/ChooseContact.java
  com.example.iut_project.ChooseContact
  com.example.iut_project.ChooseContact$1
  com.example.iut_project.ChooseContact$2
  com.example.iut_project.ChooseContact$3
  com.example.iut_project.ChooseContact$4
+com/example/iut_project/AjoutContact.java
+ com.example.iut_project.AjoutContact
+ com.example.iut_project.AjoutContact$1
+ com.example.iut_project.AjoutContact$2
+ com.example.iut_project.AjoutContact$3
 com/example/iut_project/MainActivity.java
  com.example.iut_project.MainActivity
  com.example.iut_project.MainActivity$1
