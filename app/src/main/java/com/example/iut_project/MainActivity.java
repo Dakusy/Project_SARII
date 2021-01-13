@@ -1,77 +1,99 @@
 package com.example.iut_project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
-import android.annotation.SuppressLint;
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-
-import java.util.jar.Attributes;
 
 
 /*
  * Création des contacts
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
-    private Button NextPage, Ajouter,View,Supp;
+    private static final int PERMS_CALL_ID = 1234;
+    private Button aide,param;
 
+
+    ///Permission
+    @Override
+    protected void onResume() {
+        super.onResume();
+        checkPermissions();
+    }
+
+
+    private void checkPermissions(){
+
+        if(ActivityCompat.checkSelfPermission(this,Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{
+                    Manifest.permission.SEND_SMS,
+                    Manifest.permission.RECEIVE_SMS
+
+            },PERMS_CALL_ID);
+
+            return;
+        }
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[] {
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+            },PERMS_CALL_ID);
+
+            return;
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMS_CALL_ID){
+            checkPermissions();
+        }
+    }
+
+
+    ///Différent choix
        @Override
     protected void onCreate(Bundle savedInstanceState) {
            super.onCreate(savedInstanceState);
            setContentView(R.layout.activity_main);
-           this.NextPage = findViewById(R.id.Next);
-           this.Ajouter = findViewById(R.id.Ajouter);
-           this.View = findViewById(R.id.View);
-           this.Supp = findViewById(R.id.Supprimer);
 
-           NextPage.setOnClickListener(new View.OnClickListener() {
+           this.aide = findViewById(R.id.help);
+           this.param = findViewById(R.id.retour);
+
+
+           aide.setOnClickListener(new android.view.View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   Intent send = new Intent(getApplicationContext(), ChooseContact.class);
-                   startActivity(send);
+                   Intent intent = new Intent(getApplication(), ChooseContact.class);
+                   startActivity(intent);
                    finish();
                }
 
            });
 
-
-
-           Ajouter.setOnClickListener(new View.OnClickListener() {
+           param.setOnClickListener(new android.view.View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   Intent intent_a = new Intent(getApplicationContext(), AjoutContact.class);
-                   startActivity(intent_a);
+                   Intent intent = new Intent(getApplication(), Setting.class);
+                   startActivity(intent);
                    finish();
                }
 
            });
 
-           View.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   Intent intent_a = new Intent(getApplicationContext(), ViewContact.class);
-                   startActivity(intent_a);
-                   finish();
-               }
-
-           });
-
-           Supp.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   Intent intent_a = new Intent(getApplicationContext(), DeleteContact.class);
-                   startActivity(intent_a);
-                   finish();
-               }
-
-           });
 
 
        }

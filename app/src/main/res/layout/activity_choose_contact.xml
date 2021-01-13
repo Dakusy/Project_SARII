@@ -46,20 +46,13 @@
             android:text="3" />
 
         <ImageButton
-            android:id="@+id/next"
+            android:id="@+id/back"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginLeft="150dp"
-            android:rotation="180"
-            android:scaleType="centerInside"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
             app:srcCompat="@drawable/abc_vector_test" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
 
     </LinearLayout>
 
@@ -91,6 +84,18 @@
             android:layout_marginStart="100dp"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="30dp" />
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="35dp"
+            android:rotation="180"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/abc_vector_test" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

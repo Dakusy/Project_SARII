@@ -20,28 +20,16 @@
             app:srcCompat="@drawable/logo" />
 
         <Button
-            android:id="@+id/Ajouter"
+            android:id="@+id/help"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Ajouter un contact" />
+            android:text="Demande d'aide" />
 
         <Button
-            android:id="@+id/Supprimer"
+            android:id="@+id/retour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Supprimer un contact" />
-
-        <Button
-            android:id="@+id/View"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Voir contact" />
-
-        <Button
-            android:id="@+id/Next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Suivant" />
+            android:text="Paramètre" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

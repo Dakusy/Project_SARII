@@ -23,6 +23,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.iut_project.Setting" />
         <activity android:name="com.example.iut_project.DeleteContact" />
         <activity android:name="com.example.iut_project.ViewContact" />
         <activity android:name="com.example.iut_project.ChooseContact" />

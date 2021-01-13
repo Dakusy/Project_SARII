@@ -5,15 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class AjoutContact extends AppCompatActivity {
@@ -32,7 +28,7 @@ public class AjoutContact extends AppCompatActivity {
         editName = (EditText) findViewById(R.id.Name);
         editSurname = (EditText) findViewById(R.id.Surname);
         editTel = (EditText) findViewById(R.id.Phone);
-        this.Ajout = (ImageButton) findViewById(R.id.Ajouter);
+        this.Ajout = (ImageButton) findViewById(R.id.help);
         viewAll = (Button) findViewById(R.id.test);
         back = (ImageButton) findViewById(R.id.back);
 

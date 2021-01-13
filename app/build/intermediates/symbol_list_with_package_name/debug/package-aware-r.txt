@@ -1477,7 +1477,6 @@ drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
-id Ajouter
 id B1
 id B2
 id B3
@@ -1497,7 +1496,6 @@ id FUNCTION
 id FirstFragment
 id META
 id Name
-id Next
 id Panne
 id Pb_Medicale
 id Phone
@@ -1577,7 +1575,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button
 id buttonPanel
 id cancel_button
 id center
@@ -1645,6 +1642,7 @@ id ghost_view_holder
 id gone
 id group_divider
 id groups
+id help
 id hideable
 id home
 id homeAsUp
@@ -1755,6 +1753,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id setting
 id shortcut
 id showCustom
 id showHome
@@ -1898,6 +1897,7 @@ layout activity_choose_contact
 layout activity_delete_contact
 layout activity_envoyer
 layout activity_main
+layout activity_setting
 layout activity_view_contact
 layout custom_dialog
 layout design_bottom_navigation_item

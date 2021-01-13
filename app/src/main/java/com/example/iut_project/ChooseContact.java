@@ -17,12 +17,12 @@ import java.util.List;
 public class ChooseContact extends AppCompatActivity {
 
     MySQLiteOpenHelper myDB;
-    Button choice1, choice2, choice3,button;
+    Button choice1, choice2, choice3;
     TextView contact1;
     TextView contact2;
     TextView contact3;
 
-    ImageButton next_choice;
+    ImageButton next,back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,8 @@ public class ChooseContact extends AppCompatActivity {
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
         choice3 = (Button) findViewById(R.id.choice3);
-        next_choice = (ImageButton) findViewById(R.id.next);
+        next = (ImageButton) findViewById(R.id.next);
+        back = (ImageButton) findViewById(R.id.back);
         contact1 = (TextView) findViewById(R.id.Contact1);
         contact2 = (TextView) findViewById(R.id.Contact2);
         contact3 = (TextView) findViewById(R.id.Contact3);
@@ -46,14 +47,17 @@ public class ChooseContact extends AppCompatActivity {
         List<AllContact> contacts = myDB.readContact();
         for(AllContact contact : contacts){
             if(contact.readID() == 1){
+                contact1.clearComposingText();
                 contact1.append(contact.Contact());
             }
             if(contact.readID() == 2){
                 contact2.append(contact.Contact());
             }
+
             if(contact.readID() == 3){
                 contact3.append(contact.Contact());
             }
+
         }
 
         choice1.setOnClickListener(
@@ -87,7 +91,7 @@ public class ChooseContact extends AppCompatActivity {
         );
 
 
-        next_choice.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Cursor res = myDB.getOneData(ID[0]);
@@ -144,9 +148,17 @@ public class ChooseContact extends AppCompatActivity {
             }
         });
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Intent retour = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(retour);
+                finish();
+
+            }
+        });
     }
-
 
         public void showMessage(String title,String Message){
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
