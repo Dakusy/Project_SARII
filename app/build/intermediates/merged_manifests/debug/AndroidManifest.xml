@@ -8,6 +8,8 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="30" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
@@ -21,6 +23,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.iut_project.Setting" />
+        <activity android:name="com.example.iut_project.DeleteContact" />
+        <activity android:name="com.example.iut_project.ViewContact" />
+        <activity android:name="com.example.iut_project.ChooseContact" />
         <activity android:name="com.example.iut_project.Envoyer" />
         <activity android:name="com.example.iut_project.AjoutContact" />
         <activity android:name="com.example.iut_project.MainActivity" >

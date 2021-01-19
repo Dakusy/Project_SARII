@@ -28,26 +28,26 @@
         <Button
             android:id="@+id/Panne"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:text="Panne" />
 
         <Button
             android:id="@+id/Pb_Medicale"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:text="Problème Medicale" />
 
         <Button
             android:id="@+id/Besoin_Aide"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:text="Besoin d'aide" />
 
         <Button
-            android:id="@+id/cc"
+            android:id="@+id/Back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="cc" />
+            android:text="Back" />
 
     </LinearLayout>
 

@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Contact.db";
     public static final String TABLE_NAME = "contact_table";
@@ -75,5 +78,23 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
         return cursor;
 
         }
+
+    public List<AllContact> readContact(){
+            List<AllContact> contacts = new ArrayList<>();
+
+            String strSql = "select * from " + TABLE_NAME;
+            Cursor cursor = this.getReadableDatabase().rawQuery(strSql,null);
+            cursor.moveToFirst();
+             while (!cursor.isAfterLast()){
+            AllContact contact = new AllContact(cursor.getInt(0) , cursor.getString(1),
+                    cursor.getString(2), cursor.getString(3) );
+            contacts.add(contact);
+            cursor.moveToNext();
+        }
+             cursor.close();
+
+        return contacts;
+        }
+
     }
 

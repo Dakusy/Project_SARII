@@ -19,17 +19,17 @@
             android:layout_height="235dp"
             app:srcCompat="@drawable/logo" />
 
-        <ImageButton
-            android:id="@+id/Ajout1"
+        <Button
+            android:id="@+id/help"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_input_add" />
+            android:text="Demande d'aide" />
 
         <Button
-            android:id="@+id/Next"
+            android:id="@+id/retour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Suivant" />
+            android:text="Paramètre" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

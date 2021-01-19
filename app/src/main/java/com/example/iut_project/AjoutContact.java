@@ -5,23 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class AjoutContact extends AppCompatActivity {
     MySQLiteOpenHelper myDB;
     EditText editName, editSurname, editTel;
-    String retrieve_text;
     ImageButton Ajout;
-    Button test, retrieve ,contact_1,contact_2,contact_3, next;
+    Button viewAll;
+    ImageButton back;
 
 
     @Override
@@ -32,13 +28,9 @@ public class AjoutContact extends AppCompatActivity {
         editName = (EditText) findViewById(R.id.Name);
         editSurname = (EditText) findViewById(R.id.Surname);
         editTel = (EditText) findViewById(R.id.Phone);
-        this.Ajout = (ImageButton) findViewById(R.id.Ajouter);
-        test = (Button) findViewById(R.id.test);
-        retrieve = (Button) findViewById(R.id.retrieve);
-        contact_1 = (Button) findViewById(R.id.button1);
-        contact_2 = (Button) findViewById(R.id.button2);
-        contact_3 = (Button) findViewById(R.id.button3);
-        next = (Button) findViewById(R.id.next);
+        this.Ajout = (ImageButton) findViewById(R.id.help);
+        viewAll = (Button) findViewById(R.id.test);
+        back = (ImageButton) findViewById(R.id.back);
 
         final String[] num_tel = {""};
 
@@ -49,17 +41,45 @@ public class AjoutContact extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        boolean isInserted = myDB.insertData(editName.getText().toString(),
-                                editSurname.getText().toString(),
-                                editTel.getText().toString());
-                        if (isInserted == true)
-                            Toast.makeText(AjoutContact.this, "Data Inserted", Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(AjoutContact.this, "Data not Inserted", Toast.LENGTH_LONG).show();
+                        if (editTel.getText().length() == 10 && editName.getText().length() != 0 && editSurname.getText().length() != 0) {
+                            Cursor res = myDB.getAllData();
+                            if (res.getCount() >= 3) {
+                                showMessage("Error", "3 Contacts déjà présent.");
+                            } else {
+                                boolean isInserted = myDB.insertData(editName.getText().toString(),
+                                        editSurname.getText().toString(),
+                                        editTel.getText().toString());
+                                if (isInserted == true) {
+                                    Toast.makeText(AjoutContact.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                                    Intent intent_a = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent_a);
+                                    finish();
+                                }else {
+                                    Toast.makeText(AjoutContact.this, "Data not Inserted", Toast.LENGTH_LONG).show();
+                                }
+                            }
+
+
+                        }
+                        else{
+                                showMessage("Error", "Champs non remplit ou mal remplit.");
+                            }
+
                     }
                 }
         );
-        test.setOnClickListener(
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_a = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent_a);
+                finish();
+            }
+
+        });
+
+        viewAll.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -83,106 +103,6 @@ public class AjoutContact extends AppCompatActivity {
                     }
                 }
         );
-
-        contact_1.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        ID[0] = 1;
-                        Toast.makeText(AjoutContact.this, "Contact 1 Selected ", Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
-
-        contact_2.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        ID[0] = 2;
-                        Toast.makeText(AjoutContact.this, "Contact 2 Selected ", Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
-
-        contact_3.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        ID[0] = 3;
-                        Toast.makeText(AjoutContact.this, "Contact 3 Selected ", Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
-
-        retrieve.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Cursor res = myDB.getOneData(ID[0]);
-                        if(ID[0] == 0){
-                            Toast.makeText(AjoutContact.this, "No Contact Selected", Toast.LENGTH_LONG).show();
-                        }
-
-                        if(ID[0] == 1){
-                            if(res.getCount() == 0) {
-                                // show message
-                                showMessage("Error","Nothing found");
-                                return;
-                            }
-
-                            if(res.getCount() != 0){
-                                res.moveToFirst();
-                                num_tel[0] = res.getString(3);
-                                Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
-                            }
-                        }
-
-                        if(ID[0] == 2){
-                            if(res.getCount() == 0 || res.getCount() > 1) {
-                                // show message
-                                showMessage("Error","Nothing found");
-                                return;
-                            }
-
-                            if(res.getCount() != 0){
-                                res.moveToFirst();
-                                num_tel[0] = res.getString(3);
-                                Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
-                            }
-                        }
-
-                        if(ID[0] == 3){
-                            if(res.getCount() == 0) {
-                                // show message
-                                showMessage("Error","Nothing found");
-                                return;
-                            }
-
-                            if(res.getCount() != 0){
-                                res.moveToFirst();
-                                num_tel[0] = res.getString(3);
-                                Toast.makeText(AjoutContact.this, "ID :" +  res.getString(1), Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    }
-                }
-        );
-
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent send = new Intent(getApplicationContext(), Envoyer.class);
-                send.putExtra("Number", num_tel[0]);
-                startActivity(send);
-                finish();
-            }
-
-        });
-
-
-
-
-
     }
     public void showMessage(String title,String Message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
