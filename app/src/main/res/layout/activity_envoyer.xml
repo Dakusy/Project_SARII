@@ -4,51 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".Envoyer">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="411dp"
+        android:layout_height="235dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:text="Choisis ton type d'accident : "
+        android:textSize="30sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <GridLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="235dp"
-            app:srcCompat="@drawable/logo" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Choisis ton type d'accident : "
-            android:textSize="30sp" />
+        android:layout_margin="10sp"
+        android:columnCount="1"
+        android:rowCount="4"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="14dp">
 
         <Button
             android:id="@+id/Panne"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Panne" />
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:background="#72B7FC"
+            android:fontFamily="@font/bangers"
+            android:text="Panne"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="90dp"
+            android:paddingRight="120dp"
+            android:drawableLeft="@drawable/ic_baseline_handyman_24"/>
 
         <Button
             android:id="@+id/Pb_Medicale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Problème Medicale" />
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:text="Problème Medicale"
+            android:background="#79D660"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/bangers"
+            android:textSize="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:drawableLeft="@drawable/ic_baseline_enhanced_encryption_24"/>
 
         <Button
             android:id="@+id/Besoin_Aide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Besoin d'aide" />
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:text="Besoin d'aide"
+            android:background="#A45BCB"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/bangers"
+            android:textSize="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="70dp"
+            android:paddingRight="80dp"
+            android:drawableLeft="@drawable/ic_baseline_report_problem_24"/>
 
         <Button
             android:id="@+id/Back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Back" />
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:background="#E69B4C"
+            android:paddingTop="10dp"
+            android:drawableTop="@drawable/ic_baseline_arrow_back_24"
 
-    </LinearLayout>
+
+            />
+    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

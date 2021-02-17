@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".AjoutContact">
 
     <LinearLayout
@@ -19,27 +20,41 @@
 
         <EditText
             android:id="@+id/Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="282dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/ajoutcontact"
             android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName" />
+            android:hint="Prénom"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
 
         <EditText
             android:id="@+id/Surname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="282dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ajoutcontact"
             android:ems="10"
-            android:hint="Surname"
-            android:inputType="textPersonName" />
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
 
         <EditText
             android:id="@+id/Phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="282dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ajoutcontact"
             android:ems="10"
             android:hint="Phone"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
 
         <Button
             android:id="@+id/test"
@@ -57,11 +72,12 @@
 
         <ImageButton
             android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
             android:layout_marginStart="125dp"
             android:layout_marginLeft="125dp"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="472dp"
+            android:background="#E69B4C"
             app:srcCompat="@drawable/abc_vector_test" />
 
         <ImageButton
@@ -70,7 +86,7 @@
             android:layout_height="45dp"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="470dp"
             app:srcCompat="@android:drawable/ic_input_add" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
