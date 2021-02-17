@@ -70,7 +70,7 @@ public class DeleteContact extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 boolean checked = ((RadioButton) view).isChecked();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            //    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 switch(view.getId()){
                     case R.id.B1:
                         if(checked)
@@ -91,8 +91,8 @@ public class DeleteContact extends AppCompatActivity {
                 }
 
 
-                startActivity(intent);
-                finish();
+              //  startActivity(intent);
+                //finish();
             }
 
         });

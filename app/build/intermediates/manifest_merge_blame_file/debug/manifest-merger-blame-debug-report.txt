@@ -38,41 +38,40 @@
 22-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:14:9-54
 23        android:supportsRtl="true"
 23-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:15:9-35
-24        android:testOnly="true"
-25        android:theme="@style/AppTheme" >
-25-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:16:9-40
-26        <activity android:name="com.example.iut_project.Setting" />
-26-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:17:9-54
-26-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:17:19-42
-27        <activity android:name="com.example.iut_project.DeleteContact" />
-27-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:18:9-51
-27-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:18:19-48
-28        <activity android:name="com.example.iut_project.ViewContact" />
-28-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:19:9-49
-28-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:19:19-46
-29        <activity android:name="com.example.iut_project.ChooseContact" />
-29-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:20:9-51
-29-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:20:19-48
-30        <activity android:name="com.example.iut_project.Envoyer" />
-30-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:21:9-45
-30-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:21:19-42
-31        <activity android:name="com.example.iut_project.AjoutContact" />
-31-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:22:9-50
-31-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:22:19-47
-32        <activity android:name="com.example.iut_project.MainActivity" >
-32-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:23:9-29:20
-32-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:23:19-47
-33            <intent-filter>
-33-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:24:13-28:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:25:17-69
-34-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:25:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:27:17-77
-36-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:27:27-74
-37            </intent-filter>
-38        </activity>
-39    </application>
-40
-41</manifest>
+24        android:theme="@style/AppTheme" >
+24-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:16:9-40
+25        <activity android:name="com.example.iut_project.Setting" />
+25-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:17:9-54
+25-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:17:19-42
+26        <activity android:name="com.example.iut_project.DeleteContact" />
+26-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:18:9-51
+26-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:18:19-48
+27        <activity android:name="com.example.iut_project.ViewContact" />
+27-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:19:9-49
+27-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:19:19-46
+28        <activity android:name="com.example.iut_project.ChooseContact" />
+28-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:20:9-51
+28-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:20:19-48
+29        <activity android:name="com.example.iut_project.Envoyer" />
+29-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:21:9-45
+29-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:21:19-42
+30        <activity android:name="com.example.iut_project.AjoutContact" />
+30-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:22:9-50
+30-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:22:19-47
+31        <activity android:name="com.example.iut_project.MainActivity" >
+31-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:23:9-29:20
+31-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:23:19-47
+32            <intent-filter>
+32-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:24:13-28:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:25:17-69
+33-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:25:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:27:17-77
+35-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:27:27-74
+36            </intent-filter>
+37        </activity>
+38    </application>
+39
+40</manifest>

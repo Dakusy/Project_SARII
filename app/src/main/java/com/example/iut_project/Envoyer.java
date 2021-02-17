@@ -12,7 +12,9 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +27,8 @@ public class Envoyer extends AppCompatActivity implements LocationListener {
     private LocationManager lm;
     public double latitude, longitude;
     boolean first = true;
+    int millis = 6000;
+
 ///Localisation
 
 
@@ -67,38 +71,35 @@ public class Envoyer extends AppCompatActivity implements LocationListener {
         }
     }
 
-    @Override
-    protected void onPause() {
+   @Override
+    public void onPause() {
         super.onPause();
        if(lm != null){
             lm.removeUpdates(this);
         }
 
-
-
     }
 
-    @Override
-    public void onProviderEnabled(@NonNull String provider) {
-
+    public void onLocationChanged(Location localisation){
+        Log.d("GPS","localisation : "+localisation.toString());
+        String coordonnes = String.format("Latitude :" + localisation.getLatitude() + "- Longitude : " + localisation.getLongitude());
+        Log.d("GPS", "coordonnees: " + coordonnes);
+        latitude = localisation.getLatitude();
+        longitude = localisation.getLongitude();
     }
 
-    @Override
-    public void onProviderDisabled(@NonNull String provider) {
 
+    public void onStatusChanged(String fournisseur, int status, Bundle extras){
+        Toast.makeText(null , fournisseur + "état : " + status, Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
-
+    public void onProviderEnable(String fournisseur){
+        Toast.makeText(null, fournisseur + "activé ! ", Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onLocationChanged(@NonNull Location location) {
-
-            latitude = location.getLatitude();
-            longitude = location.getLongitude();
-     }
+    public void onProviderDisabled(String fournisseur){
+        Toast.makeText(null, fournisseur + "désactivé ! ", Toast.LENGTH_SHORT).show();
+    }
 
     ///SEND
     @Override
@@ -115,57 +116,97 @@ public class Envoyer extends AppCompatActivity implements LocationListener {
         String zero = "0";
         final String num_final = zero + num;
         final String finalNumero = Numero;
-        onPause();
+
         Pan.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-               String num= num_final;
-               String msg = "Je suis en panne" + "\n" + "longitude : " + longitude+ "\n" +"latitude : " + latitude;
+                /*try {
+                    this.wait(50000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    String num= num_final;
+                    String msg = "Je suis en panne" + "\n" + "longitude : " + longitude + "\n" + "latitude : " + latitude;
 
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
 
-                SmsManager sms = SmsManager.getDefault();
-                sms.sendTextMessage(num, null, msg, pi, null);
+                    SmsManager sms = SmsManager.getDefault();
+                    sms.sendTextMessage(num, null, msg, pi, null);
 
-                Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
-                startActivity(intent);
-                finish();
+                    Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
+                    startActivity(intent);
+                    finish();
+
+                }*/
+
+                new Handler().postDelayed(new Runnable(){
+                    public void run() {
+                        String num= num_final;
+                        String msg = "Je suis en panne" + "\n" + "longitude : " + longitude + "\n" + "latitude : " + latitude;
+
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+
+                        SmsManager sms = SmsManager.getDefault();
+                        sms.sendTextMessage(num, null, msg, pi, null);
+
+                        Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
+                        startActivity(intent);
+                        finish();
+                    }
+                },5000);
+                // Pour que la localisation fonctionne (même en mouvement) faut attentre 5 secondes
+
+
+
             }
         });
         Pb.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String num=num_final;
 
-                String msg = "J'ai un problème" + "\n" + "longitude : " + longitude+ "\n" +"latitude : " + latitude;
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+                new Handler().postDelayed(new Runnable(){
+                    public void run() {
+                        String num=num_final;
 
-                SmsManager sms = SmsManager.getDefault();
-                sms.sendTextMessage(num, null, msg, pi, null);
+                        String msg = "J'ai un problème" + "\n" + "longitude : " + longitude+ "\n" +"latitude : " + latitude;
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
 
-                Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
-                startActivity(intent);
-                finish();
+                        SmsManager sms = SmsManager.getDefault();
+                        sms.sendTextMessage(num, null, msg, pi, null);
+
+                        Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
+                        startActivity(intent);
+                        finish();
+                    }
+                },5000);
             }
+
+
 
         });
 
         Ba.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String num=num_final;
-                String msg = "J'ai besoin d'aide medicale"+ "\n" + "longitude : " + longitude+ "\n" +"latitude : " + latitude;
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
 
-                SmsManager sms = SmsManager.getDefault();
-                sms.sendTextMessage(num, null, msg, pi, null);
+                new Handler().postDelayed(new Runnable(){
+                    public void run() {
+                        String num=num_final;
+                        String msg = "J'ai besoin d'aide medicale"+ "\n" + "longitude : " + longitude+ "\n" +"latitude : " + latitude;
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
 
-                Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
-                startActivity(intent);
-                finish();
+                        SmsManager sms = SmsManager.getDefault();
+                        sms.sendTextMessage(num, null, msg, pi, null);
+
+                        Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
+                        startActivity(intent);
+                        finish();
+                    }
+                },5000);
             }
 
         });
@@ -180,6 +221,10 @@ public class Envoyer extends AppCompatActivity implements LocationListener {
                     }
                 }
         );
+
+    }
+
+    private void delay() {
 
     }
 }
