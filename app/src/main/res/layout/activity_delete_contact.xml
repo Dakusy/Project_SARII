@@ -105,7 +105,7 @@
             android:layout_gravity="fill"
             android:layout_margin="5sp"
             android:background="#72B7FC"
-            android:fontFamily="@font/bangers"
+            android:fontFamily="@font/bangersr"
             android:text="Supprimer"
             android:textColor="#ffffff"
             android:textSize="30dp"

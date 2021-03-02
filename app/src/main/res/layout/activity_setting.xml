@@ -19,7 +19,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bangers"
+        android:fontFamily="@font/bangersr"
         android:text="Qu'est-ce que tu veux faire ? "
         android:textColor="#000000"
         android:textSize="30sp"
@@ -48,7 +48,7 @@
             android:layout_margin="5sp"
             android:background="@drawable/settings_button"
             android:backgroundTint="#72B7FC"
-            android:fontFamily="@font/bangers"
+            android:fontFamily="@font/bangersr"
             android:text="Ajouter \n un contact"
             android:textColor="#ffffff"
             android:textSize="30dp" />
@@ -61,7 +61,7 @@
             android:layout_margin="5sp"
             android:background="@drawable/settings_button"
             android:backgroundTint="#79D660"
-            android:fontFamily="@font/bangers"
+            android:fontFamily="@font/bangersr"
             android:text="Supprimer\n un contact"
             android:textColor="#ffffff"
             android:textSize="30dp" />
@@ -74,7 +74,7 @@
             android:layout_margin="5sp"
             android:background="@drawable/settings_button"
             android:backgroundTint="#A45BCB"
-            android:fontFamily="@font/bangers"
+            android:fontFamily="@font/bangersr"
             android:text="Voir \n contact "
             android:textColor="#ffffff"
             android:textSize="30dp" />
@@ -89,7 +89,7 @@
             android:backgroundTint="#E69B4C"
             android:background="@drawable/settings_button"
             android:drawableTop="@drawable/ic_baseline_arrow_back_24"
-            android:fontFamily="@font/bangers"
+            android:fontFamily="@font/bangersr"
             android:paddingTop="40dp"
             android:paddingBottom="15dp" />
 
