@@ -48,36 +48,36 @@
         android:orientation="vertical"
         android:paddingTop="140dp">
 
+        <RadioButton
+            android:id="@+id/B1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp" />
 
-             <RadioButton
-                android:id="@+id/B1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="5dp" />
+        <RadioButton
+            android:id="@+id/B2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp" />
 
-            <RadioButton
-                android:id="@+id/B2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="5dp" />
+        <RadioButton
+            android:id="@+id/B3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp" />
 
-            <RadioButton
-                android:id="@+id/B3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp" />
     </LinearLayout>
 
     <GridLayout
         android:id="@+id/gridLayout2"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="70dp"
         android:layout_margin="10sp"
         android:columnCount="2"
         android:rowCount="1"
@@ -87,7 +87,8 @@
 
         <ImageButton
             android:id="@+id/Retour"
-
+            android:layout_height="31dp"
+            android:layout_width="10dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
@@ -99,7 +100,8 @@
 
         <Button
             android:id="@+id/Delete"
-
+            android:layout_height="51dp"
+            android:layout_width="100dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
@@ -109,8 +111,8 @@
             android:text="Supprimer"
             android:textColor="#ffffff"
             android:textSize="30dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
             android:drawableLeft="@drawable/ic_baseline_delete_24"/>
 
     </GridLayout>

@@ -19,12 +19,16 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:fontFamily="@font/bangersr"
+        android:gravity="center"
         android:text="Qu'est-ce que tu veux faire ? "
         android:textColor="#000000"
         android:textSize="30sp"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
 
     <GridLayout
         android:id="@+id/gridLayout"
@@ -42,6 +46,8 @@
 
         <Button
             android:id="@+id/help"
+            android:layout_width="60dp"
+            android:layout_height="145dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
@@ -55,6 +61,8 @@
 
         <Button
             android:id="@+id/Supprimer"
+            android:layout_width="60dp"
+            android:layout_height="145dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
@@ -68,6 +76,8 @@
 
         <Button
             android:id="@+id/View"
+            android:layout_width="60dp"
+            android:layout_height="145dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
@@ -81,13 +91,15 @@
 
         <Button
             android:id="@+id/retour"
-            android:layout_height="60dp"
+
+            android:layout_width="60dp"
+            android:layout_height="145dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_margin="5sp"
-            android:backgroundTint="#E69B4C"
             android:background="@drawable/settings_button"
+            android:backgroundTint="#E69B4C"
             android:drawableTop="@drawable/ic_baseline_arrow_back_24"
             android:fontFamily="@font/bangersr"
             android:paddingTop="40dp"
