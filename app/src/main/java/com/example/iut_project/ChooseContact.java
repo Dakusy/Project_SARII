@@ -34,7 +34,7 @@ public class ChooseContact extends AppCompatActivity {
         choice1 = (Button) findViewById(R.id.choice1);
         choice2 = (Button) findViewById(R.id.choice2);
         choice3 = (Button) findViewById(R.id.choice3);
-        next = (ImageButton) findViewById(R.id.next);
+       // next = (ImageButton) findViewById(R.id.next);
         back = (ImageButton) findViewById(R.id.back);
         contact1 = (TextView) findViewById(R.id.Contact1);
         contact2 = (TextView) findViewById(R.id.Contact2);

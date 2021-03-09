@@ -57,4 +57,6 @@ public class AllContact {
     public String Contact(){
         return nom + " " + prenom;
     }
+
+    public String Num(){return numero;}
 }

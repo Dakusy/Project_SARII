@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -17,17 +19,24 @@ import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class Envoyer extends AppCompatActivity implements LocationListener {
 
+    MySQLiteOpenHelper myDB;
     private static final int PERMS_CALL_ID = 1234;
     private Button Pan, Pb, Ba, retour;
     private LocationManager lm;
-    public double latitude, longitude;
+    public double latitude=50.2536263, longitude=3.283738;
+
     boolean first = true;
     int millis = 6000;
+    final String[] num_tel = {""};
+    final int[] ID = {0};
 
 ///Localisation
 
@@ -101,61 +110,85 @@ public class Envoyer extends AppCompatActivity implements LocationListener {
         Toast.makeText(null, fournisseur + "désactivé ! ", Toast.LENGTH_SHORT).show();
     }
 
+
+   private String convert(double latitude, double longitude) {
+       StringBuilder builder = new StringBuilder();
+        builder.append("/maps/place/");
+       String latitudeDegrees = Location.convert(Math.abs(latitude), Location.FORMAT_SECONDS);
+       String[] latitudeSplit = latitudeDegrees.split(":");
+       builder.append(latitudeSplit[0]);
+       builder.append("°");
+       builder.append(latitudeSplit[1]);
+       builder.append("'");
+       builder.append(latitudeSplit[2]);
+
+       if (latitude < 0) {
+           builder.append("S+");
+       } else {
+           builder.append("N+");
+       }
+
+
+
+       String longitudeDegrees = Location.convert(Math.abs(longitude), Location.FORMAT_SECONDS);
+       String[] longitudeSplit = longitudeDegrees.split(":");
+       builder.append(longitudeSplit[0]);
+       builder.append("°");
+       builder.append(longitudeSplit[1]);
+       builder.append("'");
+       builder.append(longitudeSplit[2]);
+
+       if (longitude < 0) {
+           builder.append("W");
+       } else {
+           builder.append("E");
+       }
+       return builder.toString();
+   }
     ///SEND
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_envoyer);
-
+        myDB = new MySQLiteOpenHelper(this);
         Pan=(Button) findViewById(R.id.Panne);
         Pb=(Button) findViewById(R.id.Pb_Medicale);
         Ba=(Button) findViewById(R.id.Besoin_Aide);
-        retour = (Button) findViewById(R.id.Back);
-        final String Numero = getIntent().getStringExtra("Number");
-        final String num = Numero;
-        String zero = "0";
-        final String num_final = zero + num;
-        final String finalNumero = Numero;
+        //param = (ImageButton) findViewById(R.id.parametre);
+
+       final String num ;
+        final String zero = "0";
+         final String num_final= "5";
 
         Pan.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                /*try {
-                    this.wait(50000);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    String num= num_final;
-                    String msg = "Je suis en panne" + "\n" + "longitude : " + longitude + "\n" + "latitude : " + latitude;
 
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+               //for(int i = 1; i<=3; i++) {
+                List<AllContact> contacts = myDB.readContact();
+                for(final AllContact num : contacts){
+                        new Handler().postDelayed(new Runnable() {
+                            public void run() {
+                               String numero_final="0"+num.Num();
 
-                    SmsManager sms = SmsManager.getDefault();
-                    sms.sendTextMessage(num, null, msg, pi, null);
+                                String adresse = "http://maps.google.com/?q=";
 
-                    Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
-                    startActivity(intent);
-                    finish();
+                               //String test = convert(latitude,longitude);
+                                String msg = "Je suis en panne" + "\n" + "adresse : "+adresse+latitude+","+longitude;
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
 
-                }*/
+                                SmsManager sms = SmsManager.getDefault();
+                                sms.sendTextMessage(numero_final, null, msg, pi, null);
 
-                new Handler().postDelayed(new Runnable(){
-                    public void run() {
-                        String num= num_final;
-                        String msg = "Je suis en panne" + "\n" + "longitude : " + longitude + "\n" + "latitude : " + latitude;
-
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
-
-                        SmsManager sms = SmsManager.getDefault();
-                        sms.sendTextMessage(num, null, msg, pi, null);
-
-                        Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
-                        startActivity(intent);
-                        finish();
+                                Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
+                             //   startActivity(intent);
+                             //  finish();
+                            }
+                        }, 5000);
                     }
-                },5000);
+
                 // Pour que la localisation fonctionne (même en mouvement) faut attentre 5 secondes
 
 
@@ -175,7 +208,7 @@ public class Envoyer extends AppCompatActivity implements LocationListener {
                         PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
 
                         SmsManager sms = SmsManager.getDefault();
-                        sms.sendTextMessage(num, null, msg, pi, null);
+                        sms.sendTextMessage(num_final, null, msg, pi, null);
 
                         Toast.makeText(getApplicationContext(), "Message bien Envoyée", Toast.LENGTH_LONG).show();
                         startActivity(intent);
@@ -224,7 +257,11 @@ public class Envoyer extends AppCompatActivity implements LocationListener {
 
     }
 
-    private void delay() {
-
+    public void showMessage(String title,String Message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
     }
 }
