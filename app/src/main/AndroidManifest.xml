@@ -18,7 +18,6 @@
         <activity android:name=".DeleteContact" />
         <activity android:name=".ViewContact" />
         <activity android:name=".ChooseContact" />
-        <activity android:name=".Envoyer" />
         <activity android:name=".AjoutContact" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -26,7 +26,6 @@
         <activity android:name="com.example.iut_project.DeleteContact" />
         <activity android:name="com.example.iut_project.ViewContact" />
         <activity android:name="com.example.iut_project.ChooseContact" />
-        <activity android:name="com.example.iut_project.Envoyer" />
         <activity android:name="com.example.iut_project.AjoutContact" />
         <activity android:name="com.example.iut_project.MainActivity" >
             <intent-filter>

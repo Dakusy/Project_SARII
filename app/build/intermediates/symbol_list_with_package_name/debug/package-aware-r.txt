@@ -884,6 +884,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1491,7 +1492,6 @@ id B2
 id B3
 id BOTTOM_END
 id BOTTOM_START
-id Back
 id Besoin_Aide
 id CTRL
 id Contact1
@@ -1906,7 +1906,6 @@ layout abc_tooltip
 layout activity_ajout_contact
 layout activity_choose_contact
 layout activity_delete_contact
-layout activity_envoyer
 layout activity_main
 layout activity_setting
 layout activity_view_contact
@@ -1979,6 +1978,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description

@@ -151,7 +151,8 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_envoyer);
+        setContentView(R.layout.activity_main);
+
         myDB = new MySQLiteOpenHelper(this);
         Pan=(Button) findViewById(R.id.Panne);
         Pb=(Button) findViewById(R.id.Pb_Medicale);
@@ -258,6 +259,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
             }
 
         });
+
 
 
     }

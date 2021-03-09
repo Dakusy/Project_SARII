@@ -141,7 +141,7 @@ public class ChooseContact extends AppCompatActivity {
                         Toast.makeText(ChooseContact.this, "Nom :" + res.getString(1), Toast.LENGTH_LONG).show();
                     }
                 }
-                Intent send = new Intent(getApplicationContext(), Envoyer.class);
+                Intent send = new Intent(getApplicationContext(), MainActivity.class);
                 send.putExtra("Number", num_tel[0]);
                 startActivity(send);
                 finish();
