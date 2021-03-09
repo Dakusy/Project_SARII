@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
 
     MySQLiteOpenHelper myDB;
     private static final int PERMS_CALL_ID = 1234;
-    private Button Pan, Pb, Ba;
+    private Button Pan, Pb, Ba,Param;
     private LocationManager lm;
     public double latitude=50.2536263, longitude=3.283738;
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     }
 
 
-    private String convert(double latitude, double longitude) {
+  /*  private String convert(double latitude, double longitude) {
         StringBuilder builder = new StringBuilder();
         builder.append("/maps/place/");
         String latitudeDegrees = Location.convert(Math.abs(latitude), Location.FORMAT_SECONDS);
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
             builder.append("E");
         }
         return builder.toString();
-    }
+    }*/
     ///SEND
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,18 +157,23 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         Pan=(Button) findViewById(R.id.Panne);
         Pb=(Button) findViewById(R.id.Pb_Medicale);
         Ba=(Button) findViewById(R.id.Besoin_Aide);
+        Param=(Button) findViewById(R.id.Settings);
 
+        Param.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Setting.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-        final String num ;
-        final String zero = "0";
-        final String num_final= "5";
 
         Pan.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                //for(int i = 1; i<=3; i++) {
                 List<AllContact> contacts = myDB.readContact();
                 for(final AllContact num : contacts){
                     new Handler().postDelayed(new Runnable() {

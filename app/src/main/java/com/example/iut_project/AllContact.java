@@ -1,23 +1,23 @@
 package com.example.iut_project;
 
 public class AllContact {
-    private int id;
+    private String id;
     private String nom;
     private String prenom;
     private String numero;
 
-    public AllContact(int id, String nom, String prenom, String numero) {
+    public AllContact(String id, String nom, String prenom, String numero) {
        this.setId(id);
         this.setNom(nom);
         this.setPrenom(prenom);
         this.setNumero(numero);
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -50,13 +50,19 @@ public class AllContact {
         return nom + " " + prenom + " " + numero;
     }
 
-    public int readID() {
+    public String readID() {
         return id;
     }
+
+    public String readPrenom(){return prenom;}
+
+    public String readNom(){return nom;}
 
     public String Contact(){
         return nom + " " + prenom;
     }
 
     public String Num(){return numero;}
+
+
 }

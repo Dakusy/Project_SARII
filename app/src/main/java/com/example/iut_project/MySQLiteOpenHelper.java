@@ -86,7 +86,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
             Cursor cursor = this.getReadableDatabase().rawQuery(strSql,null);
             cursor.moveToFirst();
              while (!cursor.isAfterLast()){
-            AllContact contact = new AllContact(cursor.getInt(0) , cursor.getString(1),
+            AllContact contact = new AllContact(cursor.getString(0) , cursor.getString(1),
                     cursor.getString(2), cursor.getString(3) );
             contacts.add(contact);
             cursor.moveToNext();

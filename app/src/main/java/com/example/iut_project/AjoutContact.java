@@ -16,7 +16,7 @@ public class AjoutContact extends AppCompatActivity {
     MySQLiteOpenHelper myDB;
     EditText editName, editSurname, editTel;
     ImageButton Ajout;
-    Button viewAll;
+  //  Button viewAll;
     ImageButton back;
 
 
@@ -29,7 +29,7 @@ public class AjoutContact extends AppCompatActivity {
         editSurname = (EditText) findViewById(R.id.Surname);
         editTel = (EditText) findViewById(R.id.Phone);
         this.Ajout = (ImageButton) findViewById(R.id.help);
-        viewAll = (Button) findViewById(R.id.test);
+       // viewAll = (Button) findViewById(R.id.test);
         back = (ImageButton) findViewById(R.id.back);
 
         final String[] num_tel = {""};
@@ -79,30 +79,6 @@ public class AjoutContact extends AppCompatActivity {
 
         });
 
-        viewAll.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Cursor res = myDB.getAllData();
-                        if(res.getCount() == 0) {
-                            // show message
-                            showMessage("Error","Nothing found");
-                            return;
-                        }
-
-                        StringBuffer buffer = new StringBuffer();
-                        while (res.moveToNext()) {
-                            buffer.append("Id :"+ res.getString(0)+"\n");
-                            buffer.append("Name :"+ res.getString(1)+"\n");
-                            buffer.append("Surname :"+ res.getString(2)+"\n");
-                            buffer.append("Tel :"+ res.getString(3)+"\n\n");
-                        }
-
-                        // Show all data
-                        showMessage("Contacts",buffer.toString());
-                    }
-                }
-        );
     }
     public void showMessage(String title,String Message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

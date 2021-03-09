@@ -11,64 +11,61 @@
 9-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-11-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:5:5-81
-11-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:5:22-78
+11-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:6:5-81
+11-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:6:22-78
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:6:5-79
-12-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:7:5-79
+12-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:7:22-76
 13    <uses-permission android:name="android.permission.SEND_SMS" />
-13-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:7:5-67
-13-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:7:22-64
+13-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:8:5-67
+13-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:8:22-64
 14    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-14-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:8:5-70
-14-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:8:22-67
+14-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:9:5-70
+14-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:9:22-67
 15
 16    <application
-16-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:10:5-29:19
+16-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:11:5-31:19
 17        android:allowBackup="true"
-17-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:11:9-35
+17-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:12:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 18-->[androidx.core:core:1.2.0] C:\Users\thoma\OneDrive\Documents\ProjetIUT\caches\transforms-2\files-2.1\4f3d7d743df13c1af889a0942a35670d\core-1.2.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:12:9-43
-21        android:label="@string/app_name"
-21-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:13:9-41
+20-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:13:9-43
+21        android:label="j&apos;alerte"
+21-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:14:9-26
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:14:9-54
+22-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:15:9-54
 23        android:supportsRtl="true"
-23-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:15:9-35
+23-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:16:9-35
 24        android:theme="@style/AppTheme" >
-24-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:16:9-40
+24-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:17:9-40
 25        <activity android:name="com.example.iut_project.Setting" />
-25-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:17:9-54
-25-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:17:19-42
+25-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:20:9-54
+25-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:20:19-42
 26        <activity android:name="com.example.iut_project.DeleteContact" />
-26-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:18:9-51
-26-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:18:19-48
+26-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:21:9-51
+26-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:21:19-48
 27        <activity android:name="com.example.iut_project.ViewContact" />
-27-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:19:9-49
-27-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:19:19-46
-28        <activity android:name="com.example.iut_project.ChooseContact" />
-28-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:20:9-51
-28-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:20:19-48
-29        <activity android:name="com.example.iut_project.AjoutContact" />
-29-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:21:9-50
-29-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:21:19-47
-30        <activity android:name="com.example.iut_project.MainActivity" >
-30-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:22:9-28:20
-30-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:22:19-47
-31            <intent-filter>
-31-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:23:13-27:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:24:17-69
-32-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:24:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:26:17-77
-34-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:26:27-74
-35            </intent-filter>
-36        </activity>
-37    </application>
-38
-39</manifest>
+27-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:22:9-49
+27-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:22:19-46
+28        <activity android:name="com.example.iut_project.AjoutContact" />
+28-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:23:9-50
+28-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:23:19-47
+29        <activity android:name="com.example.iut_project.MainActivity" >
+29-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:24:9-30:20
+29-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:24:19-47
+30            <intent-filter>
+30-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:25:13-29:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:26:17-69
+31-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:26:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:28:17-77
+33-->C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:28:27-74
+34            </intent-filter>
+35        </activity>
+36    </application>
+37
+38</manifest>
