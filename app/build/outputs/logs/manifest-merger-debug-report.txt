@@ -85,7 +85,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\th
 	android:supportsRtl
 		ADDED from C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:14:9-26
+		ADDED from C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:14:9-28
 	android:roundIcon
 		ADDED from C:\Users\thoma\OneDrive\Documents\ProjetIUT\IUT-Project\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon

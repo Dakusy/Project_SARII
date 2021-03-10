@@ -1,17 +1,9 @@
-com/example/iut_project/AjoutContact.java
- com.example.iut_project.AjoutContact
- com.example.iut_project.AjoutContact$1
- com.example.iut_project.AjoutContact$2
-com/example/iut_project/BuildConfig.java
- com.example.iut_project.BuildConfig
-com/example/iut_project/DeleteContact.java
- com.example.iut_project.DeleteContact
- com.example.iut_project.DeleteContact$1
- com.example.iut_project.DeleteContact$2
-com/example/iut_project/MySQLiteOpenHelper.java
- com.example.iut_project.MySQLiteOpenHelper
 com/example/iut_project/AllContact.java
  com.example.iut_project.AllContact
+com/example/iut_project/BuildConfig.java
+ com.example.iut_project.BuildConfig
+com/example/iut_project/MySQLiteOpenHelper.java
+ com.example.iut_project.MySQLiteOpenHelper
 com/example/iut_project/MainActivity.java
  com.example.iut_project.MainActivity
  com.example.iut_project.MainActivity$1
@@ -21,6 +13,14 @@ com/example/iut_project/MainActivity.java
  com.example.iut_project.MainActivity$3$1
  com.example.iut_project.MainActivity$4
  com.example.iut_project.MainActivity$4$1
+com/example/iut_project/AjoutContact.java
+ com.example.iut_project.AjoutContact
+ com.example.iut_project.AjoutContact$1
+ com.example.iut_project.AjoutContact$2
+com/example/iut_project/DeleteContact.java
+ com.example.iut_project.DeleteContact
+ com.example.iut_project.DeleteContact$1
+ com.example.iut_project.DeleteContact$2
 com/example/iut_project/Setting.java
  com.example.iut_project.Setting
  com.example.iut_project.Setting$1

@@ -120,9 +120,14 @@ public class DeleteContact extends AppCompatActivity {
                     }
                     j++;
                 }
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
+
+                if(b1==0 && b2==0 && b3==0){
+                    showMessage("Erreur","Veuilliez choisir une personne à supprimer");
+                }else {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
 
         });

@@ -85,7 +85,7 @@
             android:background="@drawable/settings_button"
             android:backgroundTint="#A45BCB"
             android:fontFamily="@font/bangersr"
-            android:text="Voir \n contact "
+            android:text="Modifier \n l'ordre "
             android:textColor="#ffffff"
             android:textSize="30dp" />
 

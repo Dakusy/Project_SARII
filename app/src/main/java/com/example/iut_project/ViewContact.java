@@ -2,6 +2,7 @@ package com.example.iut_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -163,10 +164,13 @@ public class ViewContact extends AppCompatActivity {
                     myDB.updateData(saveID1[0],saveP2[0],saveN2[0],saveT2[0]);
                     myDB.updateData(saveID2[0],saveP1[0],saveN1[0],saveT1[0]);
                 }
-
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
+                if((b1==1 && b2==1 && b3==1 )|| (b1==1) ||(b2==1) ||(b3==1)||(b1==0 && b2==0 && b3==0 )){
+                    showMessage("Erreur","veuillez choisir 2 contacts ");
+                }else {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
 
                 }
 
@@ -174,5 +178,12 @@ public class ViewContact extends AppCompatActivity {
 
 
 
+    }
+    public void showMessage(String title,String Message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
     }
 }

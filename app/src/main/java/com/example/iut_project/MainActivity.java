@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     private static final int PERMS_CALL_ID = 1234;
     private Button Pan, Pb, Ba,Param;
     private LocationManager lm;
-    public double latitude=50.2536263, longitude=3.283738;
+    public double latitude=10.555, longitude=8.5555;
 
     boolean first = true;
     int millis = 6000;
@@ -173,8 +173,9 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
 
             @Override
             public void onClick(View v) {
-
+                int verif=0;
                 List<AllContact> contacts = myDB.readContact();
+
                 for(final AllContact num : contacts){
                     new Handler().postDelayed(new Runnable() {
                         public void run() {
@@ -195,6 +196,10 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
                             //  finish();
                         }
                     }, 5000);
+                    verif = 1;
+                }
+                if(verif == 0){
+                    showMessage("Erreur","Aucun contact");
                 }
 
                 // Pour que la localisation fonctionne (même en mouvement) faut attentre 5 secondes
@@ -206,7 +211,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         Pb.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
+                int verif = 0;
                 List<AllContact> contacts = myDB.readContact();
                 for(final AllContact num : contacts){
                     new Handler().postDelayed(new Runnable() {
@@ -228,6 +233,11 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
                             //  finish();
                         }
                     }, 5000);
+                    verif = 1;
+                }
+
+                if(verif == 0){
+                    showMessage("Erreur","Aucun contact");
                 }
             }
 
@@ -238,7 +248,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         Ba.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
+                int verif = 0;
                 List<AllContact> contacts = myDB.readContact();
                 for(final AllContact num : contacts){
                     new Handler().postDelayed(new Runnable() {
@@ -260,6 +270,10 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
                             //  finish();
                         }
                     }, 5000);
+                    verif = 1;
+                }
+                if(verif == 0){
+                    showMessage("Erreur","Aucun contact");
                 }
             }
 
